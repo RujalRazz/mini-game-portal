@@ -35,13 +35,34 @@ body{
 .container .weapon-box{
     height : 120px;
     width : 100%;
-    border : 1px solid red;
     margin-top : 70px;
+}
+
+.container .weapon-box h3{
+    text-align : center;
+    font-weight : 300;
+}
+
+.container .weapon-box .weapons{
+    height : 80px;
+    width : 100%;
+    margin-top : 15px;
 }
 
 .container .weapon-box .weapons div{
     height : 75px;
     width : 75px;
+    background : #F08080;
+    border : 3px solid #CD5C5C;
+    border-radius: 100%;
+    float : left;
+    margin-left : 20px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    position:  relative;
+    left : -5px;
+    cursor : pointer;
 }
 
 .container .weapon-box .weapons div img{
