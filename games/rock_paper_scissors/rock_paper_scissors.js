@@ -5,6 +5,9 @@ let weapons = weaponBox.querySelectorAll(".weapons div");
 let player = playerChoicesBox.querySelector(".player-choice img");
 let computer = playerChoicesBox.querySelector(".computer-choice img");
 
+// define the computer possible choices
+let computerChoices = ["rock", "paper", "scissors"];
+
 //Add event listeners to each weapon choice
 for (let i = 0; i < weapons.length; i++){
     weapons[i].addEventListener("click", (e)=>{
@@ -26,6 +29,9 @@ for (let i = 0; i < weapons.length; i++){
 
             // set the player choice to the selected weapon
             player.src = e.target.src;
+
+            let randomChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            console.log(randomChoice);
     }, 3000);
 })
 }
