@@ -1,5 +1,7 @@
 body {
-        margin: 0;
-        background: radial-gradient(circle, #1a002b, #000);
-        font-family: "Minecraft";
-      }
+    box-sizing: border-box;
+    margin: 0;
+    background: radial-gradient(circle, #1a002b, #000);
+    font-family: "Minecraft";
+    color: white;
+}
