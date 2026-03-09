@@ -1,7 +1,7 @@
 const games = [
   { 
     title: "Rock Paper Scissors", 
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%239333ea' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='40' text-anchor='middle' fill='white' font-weight='bold'%3E✊✋✌️%3C/text%3E%3C/svg%3E",
+    image: "./assets/images/rockPaperScissor.jpg",
     description: "Challenge the computer in this classic strategy game." 
   },
   { 
