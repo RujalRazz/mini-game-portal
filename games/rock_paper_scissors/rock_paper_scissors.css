@@ -107,7 +107,6 @@ body{
     margin-top : 40px;
     overflow : hidden;
     display : none;
-    border : 1px solid red;
 }
 
 .container .player-choices div{
@@ -145,11 +144,12 @@ body{
     left : 0px;
     transition : all .2s;
     animation : player .8s linear infinite;
+    animation-delay : .5s;
 }
 
 @keyframes player{
     0%{
-        transform : rorate(0deg);
+        transform : rotate(0deg);
     }50%{
         transform : rotate(-50deg);
     }100%{
@@ -162,6 +162,7 @@ body{
     left : 40px;
     transition : all .2s;
     animation : computer .8s linear infinite;
+    animation-delay : .5s;
 }
 
 @keyframes computer{
