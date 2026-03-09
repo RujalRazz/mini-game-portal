@@ -1,7 +1,11 @@
+@font-face {
+        font-family: "Minecraft";
+        src: url("./assets/fonts/Minecraft.ttf") format("truetype");
+      }
+
 body {
     box-sizing: border-box;
     margin: 0;
     background: radial-gradient(circle, #1a002b, #000);
-    font-family: "Minecraft";
     color: white;
 }
