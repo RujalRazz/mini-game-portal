@@ -32,6 +32,7 @@ for (let i = 0; i < weapons.length; i++){
 
             let randomChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
             console.log(randomChoice);
+            computer.src = `../../assets/images/RPS/${randomChoice}.png`;
     }, 3000);
 })
 }
