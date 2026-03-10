@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe | ASOBI</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/tictactoe.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../games.html">
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="logo" />
+        <span>ASOBI</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../games.html">Games</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="game-section">
+    <h2 class="section-title">TIC-TAC-TOE</h2>
+    <div class="game-container">
+
+      <!-- mode selection screen -->
+      <div id="mode-selection">
+        <p class="subtitle">Select Game Mode</p>
+        <div class="mode-buttons">
+          <button class="mode-btn" id="single-player-btn">🤖 vs Computer</button>
+          <button class="mode-btn" id="two-player-btn">👥 Two Players</button>
+        </div>
+      </div>
+
+      <!-- main game screen (hidden initially) -->
+      <div id="game-area" style="display: none;">
+        <div class="scoreboard">
+          <div class="score x-score">
+            <span id="x-label">Player X</span>
+            <span id="x-score">0</span>
+          </div>
+          <div class="score d-score">
+            <span>Draws</span>
+            <span id="d-score">0</span>
+          </div>
+          <div class="score o-score">
+            <span id="o-label">Player O</span>
+            <span id="o-score">0</span>
+          </div>
+        </div>
+
+        <div class="status" id="status">Player X's turn</div>
+
+        <div class="board" id="board">
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="game-buttons">
+          <button class="btn menu-btn" id="menu">🏠 Back to Menu</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="../js/tictactoe.js"></script>
+</body>
+</html>
