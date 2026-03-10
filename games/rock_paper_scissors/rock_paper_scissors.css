@@ -12,7 +12,7 @@ body{
 }
 
 .container{
-    height : 380px;
+    height : 415px; /*380px*/
     width : 350px;
     background : #fff;
     position : absolute;
@@ -173,4 +173,26 @@ body{
     }100%{
         transform : rotateY(180deg) rotate(0deg);
     }
+}
+
+.container .result-box{
+    text-align : center;
+    font-size : 14px;
+    margin-top : -10px;
+    transition : all .2s;
+}
+
+.container .result-box button{
+    all : unset;
+    height : 30px;
+    width : 90px;
+    background : #F08080;
+    white-space : nowrap;
+    color : #222;
+    border-radius : 5px;
+    font-weight : 600;
+    font-size : 12px;
+    margin-top : 10px;
+    cursor : pointer;
+    transition : all .2s;
 }
