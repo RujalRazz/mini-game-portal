@@ -35,6 +35,11 @@ let outcomes = {
 for (let i = 0; i < weapons.length; i++){
     weapons[i].addEventListener("click", (e)=>{
 
+        //set the revealing hand to rock
+        player.src = "../../assets/images/RPS/rock.png";
+        computer.src = `../../assets/images/RPS/rock.png`;
+
+
         //Hide the weapon box and show the player choices
         weaponBox.style.display = "none";
         playerChoicesBox.style.display = "block";
@@ -87,3 +92,19 @@ let showResult = (result) => {
         drawValueTxt.innerHTML = draw;
     }
 }
+
+// add event listener to the play again button
+playAgainBtn.addEventListener("click", ()=>{
+    //resume the game state
+    playerChoicesBox.classList.remove("active");
+    container.style.height = "380px";
+    resultBox.style.display = "none";
+    weaponBox.style.display = "block";
+    playerChoicesBox.style.display = "none";
+
+    //Resume the animations on the revealing hands when player choice his weapon
+    let playerChoices = playerChoicesBox.querySelectorAll("div");
+    for(let i = 0; i< playerChoices.length; i++){
+        playerChoices[i].style.animationPlayState = "running";
+    }
+})
