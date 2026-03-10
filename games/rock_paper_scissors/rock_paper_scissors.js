@@ -8,6 +8,12 @@ let resultBox = container.querySelector(".result-box");
 let resultTxt = resultBox.querySelector("h3");
 let playAgainBtn = resultBox.querySelector("button");
 let result = document.querySelector('.container .result');
+let wonValueTxt = document.querySelector(".score-box .won h3 span");
+let lostValueTxt = document.querySelector(".score-box .lost h3 span");
+let drawValueTxt = document.querySelector(".score-box .draw h3 span");
+
+//initialize the scores 
+let won = 0, lost = 0, draw = 0;
 
 // define the computer possible choices
 let computerChoices = ["rock", "paper", "scissors"];
@@ -66,11 +72,18 @@ let showResult = (result) => {
     container.style.height = "415px";
     resultBox.style.display = "block";
 
+    //updated the result text and scores based on the outcome of the game
     if (result === "You"){
         resultTxt.innerHTML = "Congrats, You Won!  &#x1F389;";
+        won++;
+        wonValueTxt.innerHTML = won;
     }else if (result === "Computer"){
-    resultTxt.innerHTML = "Sorry, You Lost!";
+        resultTxt.innerHTML = "Sorry, You Lost!";
+        lost++;
+        lostValueTxt.innerHTML = lost;
     }else{
-    resultTxt.innerHTML = "Match Draw!";
+        resultTxt.innerHTML = "Match Draw!";
+        draw++;
+        drawValueTxt.innerHTML = draw;
     }
 }
