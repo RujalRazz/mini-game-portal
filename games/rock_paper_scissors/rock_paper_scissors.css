@@ -12,7 +12,7 @@ body{
 }
 
 .container{
-    height : 415px; /*380px*/
+    height : 380px;
     width : 350px;
     background : #fff;
     position : absolute;
@@ -180,6 +180,7 @@ body{
     font-size : 14px;
     margin-top : -10px;
     transition : all .2s;
+    display : none;  
 }
 
 .container .result-box button{
