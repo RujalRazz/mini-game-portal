@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+    @font-face {
+        font-family: "Minecraft";
+        src: url("./assets/fonts/Minecraft.ttf") format("truetype");
+      }
+      .about-section {
+        padding: 60px 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #c084fc;
+        margin-bottom: 15px;
+        text-shadow: 0 0 30px rgba(147, 51, 234, 0.6);
+        letter-spacing: 2px;
+      }
+
+      .section-subtitle {
+        font-size: 18px;
+        color: #d8b4fe;
+        max-width: 600px;
+        margin: 0 auto 60px;
+        line-height: 1.6;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        padding: 20px;
+      }
+
+      .member-card {
+        background: linear-gradient(145deg, #1a0033 0%, #0a0015 100%);
+        border: 2px solid transparent;
+        border-radius: 20px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+
+      .member-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 0;
+        border-radius: 20px;
+      }
+
+      .member-card:hover::before {
+        opacity: 0.1;
+      }
+
+      .member-card:hover {
+        transform: translateY(-10px);
+        border-color: #9333ea;
+        box-shadow:
+          0 20px 60px rgba(147, 51, 234, 0.6),
+          0 0 40px rgba(147, 51, 234, 0.4);
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .member-avatar {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        border: 4px solid #9333ea;
+        overflow: hidden;
+        box-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+        transition: all 0.4s ease;
+        background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
+      }
+
+      .member-card:hover .member-avatar {
+        border-color: #c084fc;
+        box-shadow: 0 0 40px rgba(147, 51, 234, 0.8);
+        transform: scale(1.05);
+      }
+
+      .member-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .member-info {
+        text-align: center;
+      }
+
+      .member-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #c084fc;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .member-card:hover .member-name {
+        color: #e9d5ff;
+        text-shadow: 0 0 10px rgba(147, 51, 234, 0.8);
+      }
+
+      .member-role {
+        font-size: 16px;
+        color: #9333ea;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .member-bio {
+        font-size: 14px;
+        color: #d8b4fe;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .member-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .skill-tag {
+        background: rgba(147, 51, 234, 0.2);
+        border: 1px solid #9333ea;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 12px;
+        color: #c084fc;
+        transition: all 0.3s ease;
+      }
+
+      .member-card:hover .skill-tag {
+        background: rgba(147, 51, 234, 0.4);
+        border-color: #c084fc;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(147, 51, 234, 0.3);
+        border: 1px solid #9333ea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #c084fc;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: #9333ea;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(147, 51, 234, 0.6);
+      }
+
+      .decorative-line {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #9333ea, transparent);
+        margin: 15px auto;
+      }
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 36px;
+        }
+
+        .team-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .about-section {
+          padding: 40px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./games.html"
+        ><div class="logo">
+          <img src="./assets/images/logo.png" alt="logo" />
+          <span>ASOBI</span>
+        </div></a
+      >
+      <ul class="nav-links">
+        <li><a href="./games.html">Games</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="./about.html">About Us</a></li>
+      </ul>
+    </nav>
+    <section class="about-section">
+      <div class="section-header">
+        <h1 class="section-title">MEET OUR TEAM</h1>
+      </div>
+
+      <div class="team-grid" id="teamGrid"></div>
+    </section>
+
+    <script src="./js/about.js"></script>
+  </body>
+</html>

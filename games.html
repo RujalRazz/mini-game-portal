@@ -6,45 +6,14 @@
     <title>Enjoy Games</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <style>
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 40px;
-        background: rgba(10, 0, 20, 0.9);
-        border-bottom: 1px solid #9333ea;
-        position: sticky;
-        top: 0;
+      @font-face {
+        font-family: "Minecraft";
+        src: url("./assets/fonts/Minecraft.ttf") format("truetype");
       }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      body {
+        font-family: "Minecraft";
       }
-
-      .logo img {
-        width: 35px;
-      }
-      .logo span {
-        font-size: 18px;
-        color: #c084fc;
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 40px;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-        transition: 0.3s;
-      }
-      .nav-links a:hover {
-        color: #c084fc;
-        text-shadow: 0 0 8px #9333ea;
-      }
+      
       .games-section {
         padding: 80px 0;
         text-align: center;
@@ -95,7 +64,6 @@
         filter: blur(2px);
         transition: all 0.5s ease;
         flex-shrink: 0;
-        cursor: pointer;
       }
 
       .card img {
@@ -120,7 +88,29 @@
         line-height: 1.5;
         font-family: "Minecraft";
       }
-
+      .play {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 25px;
+        background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+      .play:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(147, 51, 234, 0.6);
+      }
+      .card:not(.active) .play {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .card.active .play {
+        opacity: 1;
+      }
       .card.active {
         transform: scale(1.1);
         opacity: 1;
@@ -136,6 +126,7 @@
       .card:hover:not(.active) {
         opacity: 0.6;
         filter: blur(1px);
+        cursor: not-allowed;
       }
 
       .arrow {
@@ -199,7 +190,7 @@
       <ul class="nav-links">
         <li><a href="./games.html">Games</a></li>
         <li><a href="#">Explore</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="./about.html">About Us</a></li>
       </ul>
     </nav>
     <section class="games-section">
