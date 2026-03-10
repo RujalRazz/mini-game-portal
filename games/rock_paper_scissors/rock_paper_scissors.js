@@ -4,9 +4,25 @@ let playerChoicesBox = container.querySelector(".player-choices");
 let weapons = weaponBox.querySelectorAll(".weapons div");
 let player = playerChoicesBox.querySelector(".player-choice img");
 let computer = playerChoicesBox.querySelector(".computer-choice img");
+let resultBox = container.querySelector(".result-box");
+let resultTxt = resultBox.querySelector("h3");
+let playAgainBtn = resultBox.querySelector("button");
 
 // define the computer possible choices
 let computerChoices = ["rock", "paper", "scissors"];
+
+// define the possible outcomes of the game
+let outcomes = {
+    RockRock : "Draw",
+    RockPaper : "Computer",
+    RockScissors : "You",
+    PaperPaper : "Draw",
+    PaperScissors : "Computer",
+    PaperRock : "You",
+    ScissorsScissors : "Draw",
+    ScissorsRock : "Computer",
+    ScissorsPaper : "You"
+}
 
 //Add event listeners to each weapon choice
 for (let i = 0; i < weapons.length; i++){
@@ -33,6 +49,19 @@ for (let i = 0; i < weapons.length; i++){
             let randomChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
             console.log(randomChoice);
             computer.src = `../../assets/images/RPS/${randomChoice}.png`;
+
+            let userChoice = e.target.parentElement.className;
+            let outcomeValue = outcomes[userChoice + randomChoice];
+
+            //show the result 
+            showResult(outcomeValue);
     }, 3000);
 })
+}
+
+let showResult = (result) => {
+
+    // show the result box and set container height
+    container.style.height = "415px";
+    resultBox.style.display = "block";
 }
