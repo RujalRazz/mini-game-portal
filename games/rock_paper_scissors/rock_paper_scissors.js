@@ -35,9 +35,11 @@ let outcomes = {
 for (let i = 0; i < weapons.length; i++){
     weapons[i].addEventListener("click", (e)=>{
 
-        //set the revealing hand to rock
+        //set the revealing hand to rock (initial orientation)
         player.src = "../../assets/images/RPS/rock.png";
+        player.className = "rock";                     // give the <img> a weapon class
         computer.src = `../../assets/images/RPS/rock.png`;
+        computer.className = "rock";
 
 
         //Hide the weapon box and show the player choices
@@ -56,13 +58,15 @@ for (let i = 0; i < weapons.length; i++){
             } 
 
             // set the player choice to the selected weapon
+            let userChoice = e.target.parentElement.className.toLowerCase();        // rock/paper/scissors
             player.src = e.target.src;
+            player.className = userChoice;                                         // update class for CSS rules
 
             let randomChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
             console.log(randomChoice);
             computer.src = `../../assets/images/RPS/${randomChoice}.png`;
+            computer.className = randomChoice;
 
-            let userChoice = e.target.parentElement.className.toLowerCase();
             let outcomeValue = outcomes[userChoice + randomChoice];
 
             //show the result 
@@ -108,3 +112,4 @@ playAgainBtn.addEventListener("click", ()=>{
         playerChoices[i].style.animationPlayState = "running";
     }
 })
+
