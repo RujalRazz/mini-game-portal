@@ -279,7 +279,7 @@ replayBtn.addEventListener("click", () => {
 
 exitBtn.addEventListener("click", () => {
   if (isGameOver) {
-    window.location.href = "../games.html";
+    window.location.href = "../../games.html";
   } else if (isPaused) {
     togglePause();
   }
