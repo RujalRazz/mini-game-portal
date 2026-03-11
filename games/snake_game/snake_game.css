@@ -24,7 +24,6 @@ body {
 .game-title {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #ffffff;
   letter-spacing: 1px;
 }
 
@@ -41,7 +40,6 @@ body {
   border-radius: 10px;
   padding: 12px 24px;
   min-width: 120px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.06);
 }
 
 .label {
@@ -59,74 +57,11 @@ body {
 
 .board-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-#game-board {
-  position: relative;
   width: 500px;
   height: 500px;
-  background: #111;
-  border: 2px solid #333;
-  overflow: hidden;
+  margin: 0 auto 18px;
 }
 
-/* Optional subtle grid look */
-#game-board::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 25px 25px;
-  pointer-events: none;
-}
-
-.controls-text {
-  color: #aaa;
-  font-size: 0.95rem;
-}
-
-/* Overlay */
-#game-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.overlay-box {
-  background: #111;
-  border: 1px solid #444;
-  border-radius: 14px;
-  padding: 24px 30px;
-  min-width: 260px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
-}
-
-#overlay-title {
-  margin-bottom: 14px;
-  font-size: 1.8rem;
-}
-
-.overlay-box p {
-  margin: 8px 0;
-}
-
-.overlay-text {
-  color: #ccc;
-  font-size: 0.95rem;
-}
 #game-board {
   width: 500px;
   height: 500px;
@@ -135,7 +70,6 @@ body {
   grid-template-rows: repeat(20, 25px);
   background: #000;
   border: 2px solid #222;
-  margin: auto;
 }
 
 .cell {
@@ -145,12 +79,10 @@ body {
 
 .snake {
   background: #ff3b3b;
-  border-radius: 3px;
 }
 
 .snake-head {
   background: #ff1f1f;
-  border-radius: 6px;
 }
 
 .food {
@@ -165,13 +97,17 @@ body {
 
 .wall {
   background: #ff8c00;
-  border-radius: 4px;
+}
+
+.controls-text {
+  color: #aaa;
+  font-size: 0.95rem;
 }
 
 #game-overlay {
-  position: fixed;
+  position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +115,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .overlay-box {
@@ -198,6 +134,11 @@ body {
 
 .overlay-box p {
   margin: 10px 0;
+}
+
+#overlay-message {
+  color: #ccc;
+  font-size: 0.95rem;
 }
 
 #replay-btn {

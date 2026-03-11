@@ -7,9 +7,9 @@ const games = [
   },
   { 
     title: "Snake Game", 
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23c084fc' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='60' text-anchor='middle' fill='white'%3E🐍%3C/text%3E%3C/svg%3E",
+    image: "./assets/images/snake.gif",
     description: "Eat food, grow longer and avoid crashing.",
-    link: "./games.html"
+    link: "./games/snake_game/snake_game.html"
   },
   { 
     title: "Tic Tac Toe", 
