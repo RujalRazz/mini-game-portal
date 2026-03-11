@@ -57,18 +57,22 @@ body{
     height : 120px;
     width : 100%;
     margin-top : 70px;
+    color: #000; 
+    
 }
 
 .container .weapon-box h3{
     text-align : center;
-    font-weight : 700;     
-    font-size : 22px;        
+    font-weight : 700;       
+    font-size : 22px;  
+    color: #000;      
 }
 
 .container .weapon-box .weapons{
     height : 80px;
     width : 100%;
     margin-top : 15px;
+    color: #000; 
 }
 
 .container .weapon-box .weapons div{
@@ -85,6 +89,7 @@ body{
     position:  relative;
     left : -5px;
     cursor : pointer;
+    color: #000; 
 }
 
 .container .weapon-box .weapons div img{
@@ -100,6 +105,7 @@ body{
     bottom : 25px;
     border-radius : 7px;
     padding : 10px;
+    color: #000; 
 }
 
 .container .score-box div{
@@ -201,6 +207,7 @@ body{
     margin-top : -10px;
     transition : all .2s;
     display : none;  
+    color: #000; 
 }
 
 .container .result-box button{
@@ -236,15 +243,4 @@ body{
     left: 160px;
 }
 
-.computer-choice img {
-    /* no default mirror – orientation comes from the weapon class */
-}
 
-.game-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;    
-    gap: 30px;  
-}

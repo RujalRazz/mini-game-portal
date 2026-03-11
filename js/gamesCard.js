@@ -2,8 +2,8 @@ const games = [
   { 
     title: "Rock Paper Scissors", 
     image: "./assets/images/rockPaperScissor.jpg",
-    description: "Challenge the computer in this classic strategy game.",
-    link: "./games.html"
+    description: "Challenge the computer and test your luck.",
+    link: "../games/rock_paper_scissors/rock_paper_scissors.html"
   },
   { 
     title: "Snake Game", 
@@ -15,7 +15,7 @@ const games = [
     title: "Tic Tac Toe", 
     image: "./assets/images/tiktaktoe.jpeg",
     description: "Classic X and O battle against a friend or AI.",
-    link: "./games.html"
+    link: "../games/tictactoe.html"
   },
 ];
 
