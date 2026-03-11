@@ -170,3 +170,18 @@ body {
 #exit-btn:hover {
   background: #7d1e1e;
 }
+
+#resume-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#resume-btn:hover {
+  background: #7d1515;
+}

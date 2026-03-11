@@ -72,6 +72,8 @@ function resetGame() {
   direction = { x: 1, y: 0 };
   nextDirection = { x: 1, y: 0 };
 
+  replayBtn.textContent = "Replay"; 
+
   food = null;
   walls = [];
   score = 0;
@@ -239,7 +241,8 @@ function togglePause() {
   isPaused = !isPaused;
 
   if (isPaused) {
-    showOverlay("Paused", "Resume, Replay or Exit the game", "Exit");
+    replayBtn.textContent = "Resume";
+    showOverlay("Paused", "Game is paused. Click Resume to continue", "Exit");
   } else {
     hideOverlay();
   }
@@ -248,6 +251,8 @@ function togglePause() {
 function endGame() {
   isGameOver = true;
   clearInterval(gameInterval);
+
+  replayBtn.textContent = "Replay";   
   showOverlay("Game Over", "Click Replay to play again", "Exit");
 }
 
@@ -274,7 +279,14 @@ document.addEventListener("keydown", (e) => {
 });
 
 replayBtn.addEventListener("click", () => {
-  resetGame();
+  if (isPaused) {
+    // Resume the current game
+    isPaused = false;
+    hideOverlay();
+  } else if (isGameOver) {
+    // Restart after game over
+    resetGame();
+  }
 });
 
 exitBtn.addEventListener("click", () => {
