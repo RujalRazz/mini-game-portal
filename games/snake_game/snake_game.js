@@ -8,6 +8,7 @@ const overlayScore = document.getElementById("overlay-score");
 const overlayLevel = document.getElementById("overlay-level");
 const overlayMessage = document.getElementById("overlay-message");
 const replayBtn = document.getElementById("replay-btn");
+const exitBtn = document.getElementById("exit-btn");
 
 const BOARD_SIZE = 500;
 const CELL_SIZE = 25;
@@ -48,11 +49,12 @@ function updateUI() {
   levelEl.textContent = level;
 }
 
-function showOverlay(title, message) {
+function showOverlay(title, message, buttonText) {
   overlayTitle.textContent = title;
   overlayScore.textContent = score;
   overlayLevel.textContent = level;
   overlayMessage.textContent = message;
+  exitBtn.textContent = buttonText;
   overlay.classList.remove("hidden");
 }
 
@@ -108,7 +110,7 @@ function spawnFood() {
 
 function generateWalls() {
   walls = [];
-  const wallCount = 8;
+  const wallCount = 4;
 
   while (walls.length < wallCount) {
     const x = Math.floor(Math.random() * COLS);
@@ -184,7 +186,6 @@ function moveSnake() {
     return;
   }
 
-  // ignore current tail cell because tail moves away
   for (let i = 0; i < snake.length - 1; i++) {
     if (snake[i].x === newHead.x && snake[i].y === newHead.y) {
       endGame();
@@ -247,7 +248,7 @@ function togglePause() {
 function endGame() {
   isGameOver = true;
   clearInterval(gameInterval);
-  showOverlay("Game Over", "Click Replay to play again");
+  showOverlay("Game Over", "Click Replay to play again", "Exit");
 }
 
 document.addEventListener("keydown", (e) => {
@@ -274,6 +275,14 @@ document.addEventListener("keydown", (e) => {
 
 replayBtn.addEventListener("click", () => {
   resetGame();
+});
+
+exitBtn.addEventListener("click", () => {
+  if (isGameOver) {
+    window.location.href = "../games.html";
+  } else if (isPaused) {
+    togglePause();
+  }
 });
 
 createBoard();

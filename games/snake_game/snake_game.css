@@ -82,7 +82,7 @@ body {
 }
 
 .snake-head {
-  background: #ff1f1f;
+  background: #ff3b3b;
 }
 
 .food {
@@ -96,7 +96,7 @@ body {
 }
 
 .wall {
-  background: #ff8c00;
+  background: #633701;
 }
 
 .controls-text {
@@ -152,6 +152,21 @@ body {
   font-size: 16px;
 }
 
+#exit-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 #replay-btn:hover {
-  background: #e62e2e;
+  background: #7d1515;
+}
+
+#exit-btn:hover {
+  background: #7d1e1e;
 }
