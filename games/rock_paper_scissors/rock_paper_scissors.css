@@ -1,5 +1,9 @@
 /* Google Font Import - Varela Round */
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+        font-family: "Minecraft";
+        src: url("./assets/fonts/Minecraft.ttf") format("truetype");
+      }
 *{
     margin : 0;
     padding : 0;
@@ -7,8 +11,10 @@
 }
 
 body{
-    background : #F08080;
+    background : #2d0259; /*radial-gradient(circle, #500185);*/
+    min-height: 100vh;
     font-family: "Varela Round", serif;
+    position: relative;
 }
 
 .container{
@@ -22,6 +28,23 @@ body{
     border-radius : 7px;
     padding : 25px;
     transition : all .2s;
+    box-shadow : 0 0 20px 8px rgba(255, 255, 255, 0.8);
+}
+
+.page-title{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 35px;             
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 
+                 0 0 20px rgba(255, 255, 255, 0.6), 
+                 0 0 40px rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: calc(50% - 305px);      
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: fit-content;
 }
 
 .container .game-title{
@@ -30,6 +53,7 @@ body{
     color : #222;
     font-weight : 600;
     margin-top : 5px;
+    display: none;
 }
 
 .container .weapon-box,
@@ -41,7 +65,8 @@ body{
 
 .container .weapon-box h3{
     text-align : center;
-    font-weight : 300;
+    font-weight : 700;       /* changed from 300 to 700 for bold */
+    font-size : 22px;        /* increased size */
 }
 
 .container .weapon-box .weapons{
@@ -53,8 +78,8 @@ body{
 .container .weapon-box .weapons div{
     height : 75px;
     width : 75px;
-    background : #F08080;
-    border : 3px solid #CD5C5C;
+    background : #a85af7;/*radial-gradient(circle, #500185);*/
+    border : 3px solid #2d0259;
     border-radius: 100%;
     float : left;
     margin-left : 20px;
@@ -74,7 +99,7 @@ body{
 .container .score-box{
     height : 60px;
     width : 300px;
-    background : #F08080;
+    background : #a85af7;
     position : absolute;
     bottom : 25px;
     border-radius : 7px;
@@ -119,9 +144,8 @@ body{
 }
 
 .container .player-choices div:nth-child(3){
-    transform : rotateY(180deg);
-    position : relative;
-    left : 160px;
+    position: relative;
+    left: 160px;
 }
 
 .container .player-choices div img{
@@ -187,7 +211,7 @@ body{
     all : unset;
     height : 30px;
     width : 90px;
-    background : #F08080;
+    background : #a85af7;
     white-space : nowrap;
     color : #222;
     border-radius : 5px;
@@ -196,4 +220,26 @@ body{
     margin-top : 10px;
     cursor : pointer;
     transition : all .2s;
+}
+
+
+/* orientation rules now actually match the <img> element */
+.player-choice img.paper,
+.computer-choice img.paper {
+    transform: rotate(180deg);    /* tweak until the paper hand points the right way */
+}
+
+.player-choice img.scissors,
+.computer-choice img.scissors {
+    transform: rotate(90deg);     /* make scissors blades horizontal */
+}
+
+/* no more mirror‑flip on the container */
+.container .player-choices div:nth-child(3){
+    position: relative;
+    left: 160px;
+}
+
+.computer-choice img {
+    /* no default mirror – orientation comes from the weapon class */
 }
