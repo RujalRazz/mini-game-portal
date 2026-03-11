@@ -3,48 +3,6 @@
   src: url("../assets/fonts/Minecraft.ttf") format("truetype");
 }
 
-/* navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: rgba(10, 0, 20, 0.9);
-  border-bottom: 1px solid #9333ea;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo img { width: 35px; }
-.logo span {
-  font-size: 18px;
-  color: #c084fc;
-  font-family: "Minecraft", sans-serif;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  padding: 0;
-  margin: 0;
-}
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-family: "Minecraft", sans-serif;
-  transition: 0.3s;
-}
-.nav-links a:hover {
-  color: #c084fc;
-  text-shadow: 0 0 8px #9333ea;
-}
-
 /* game layout */
 .game-section {
   display: flex;

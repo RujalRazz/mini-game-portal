@@ -15,7 +15,7 @@ const games = [
     title: "Tic Tac Toe", 
     image: "./assets/images/tiktaktoe.jpeg",
     description: "Classic X and O battle against a friend or AI.",
-    link: "./games.html"
+    link: "../games/tictactoe.html"
   },
 ];
 
