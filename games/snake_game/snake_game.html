@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake_game.css" />
+</head>
+<body>
+  <main class="game-page">
+    <h1 class="game-title">Snake Game</h1>
+
+    <section class="game-info">
+      <div class="info-box">
+        <span class="label">Score</span>
+        <span id="score">0</span>
+      </div>
+
+      <div class="info-box">
+        <span class="label">Level</span>
+        <span id="level">1</span>
+      </div>
+    </section>
+
+    <section class="board-wrapper">
+      <div id="game-board"></div>
+
+      <div id="game-overlay" class="hidden">
+        <div class="overlay-box">
+          <h2 id="overlay-title">Paused</h2>
+          <p>Score: <span id="overlay-score">0</span></p>
+          <p>Level: <span id="overlay-level">1</span></p>
+          <p id="overlay-message"></p>
+          <button id="replay-btn">Replay</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="controls-text">
+      Arrow Keys to move • Space to pause • Replay button to restart
+    </p>
+  </main>
+
+  <script src="snake_game.js"></script>
+</body>
+</html>
