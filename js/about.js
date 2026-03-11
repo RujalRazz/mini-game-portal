@@ -1,7 +1,7 @@
 const teamMembers = [
         {
           name: "Rujal Sharma Rajopadhyaya",
-          bio: "",
+          bio: "A Coding Enthusiast",
           skills: ["JavaScript", "React", "Node.js", "Python", "NextJs"],
           picture: "./assets/images/rujal.jpeg",
           social: {
