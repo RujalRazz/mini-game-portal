@@ -2,7 +2,7 @@ const teamMembers = [
         {
           name: "Rujal Sharma Rajopadhyaya",
           bio: "A Coding Enthusiast",
-          skills: ["JavaScript", "React", "Node.js", "Python", "NextJs"],
+          skills: ["Front-End", "NodeJs", "Python", "Sql", "Java"],
           picture: "./assets/images/rujal.jpeg",
           social: {
             github: "https://github.com/RujalRazz",
@@ -11,12 +11,12 @@ const teamMembers = [
         },
         {
           name: "Dibika Dahal",
-          bio: "",
-          skills: [],
-          picture: "",
+          bio: "AI Enthusiast",
+          skills: ["Java", "Python", "NumPy", "Pandas", "MySql"],
+          picture: "./assets/images/Dibika.jpeg",
           social: {
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/dibikadahal",
+            linkedin: "https://www.linkedin.com/in/dibika-dahal-a720642b0/"
           }
         },
         {
@@ -49,7 +49,6 @@ const teamMembers = [
           const card = document.createElement('div');
           card.className = 'member-card';
           
-          // Create skill tags using for loop
           let skillTags = '';
           for (let j = 0; j < member.skills.length; j++) {
             skillTags += `<span class="skill-tag">${member.skills[j]}</span>`;
@@ -64,6 +63,7 @@ const teamMembers = [
                 <h3 class="member-name">${member.name}</h3>
                 <div class="decorative-line"></div>
                 <p class="member-bio">${member.bio}</p>
+                <h4 class="skills-label">Skills</h4>
                 <div class="member-skills">
                   ${skillTags}
                 </div>

@@ -4,16 +4,13 @@
         font-family: "Minecraft";
         src: url("./assets/fonts/Minecraft.ttf") format("truetype");
       }
-*{
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
-}
+
 
 body{
     background : #2d0259; /*radial-gradient(circle, #500185);*/
     min-height: 100vh;
     font-family: "Varela Round", serif;
+    color: #000; 
     position: relative;
 }
 
@@ -22,7 +19,7 @@ body{
     width : 350px;
     background : #fff;
     position : absolute;
-    top : 50%;
+    top : 70%;
     left : 50%;
     transform : translate(-50%, -50%);
     border-radius : 7px;
@@ -40,7 +37,7 @@ body{
                  0 0 20px rgba(255, 255, 255, 0.6), 
                  0 0 40px rgba(255, 255, 255, 0.4);
     position: absolute;
-    top: calc(50% - 305px);      
+    top: calc(50% - 200px);      
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -61,18 +58,22 @@ body{
     height : 120px;
     width : 100%;
     margin-top : 70px;
+    color: #000; 
+    
 }
 
 .container .weapon-box h3{
     text-align : center;
-    font-weight : 700;       /* changed from 300 to 700 for bold */
-    font-size : 22px;        /* increased size */
+    font-weight : 700;       
+    font-size : 22px;  
+    color: #000;      
 }
 
 .container .weapon-box .weapons{
     height : 80px;
     width : 100%;
     margin-top : 15px;
+    color: #000; 
 }
 
 .container .weapon-box .weapons div{
@@ -89,6 +90,7 @@ body{
     position:  relative;
     left : -5px;
     cursor : pointer;
+    color: #000; 
 }
 
 .container .weapon-box .weapons div img{
@@ -104,6 +106,7 @@ body{
     bottom : 25px;
     border-radius : 7px;
     padding : 10px;
+    color: #000; 
 }
 
 .container .score-box div{
@@ -205,6 +208,7 @@ body{
     margin-top : -10px;
     transition : all .2s;
     display : none;  
+    color: #000; 
 }
 
 .container .result-box button{
@@ -240,6 +244,4 @@ body{
     left: 160px;
 }
 
-.computer-choice img {
-    /* no default mirror – orientation comes from the weapon class */
-}
+

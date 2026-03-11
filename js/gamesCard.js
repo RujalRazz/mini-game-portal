@@ -2,8 +2,8 @@ const games = [
   { 
     title: "Rock Paper Scissors", 
     image: "./assets/images/rockPaperScissor.jpg",
-    description: "Challenge the computer in this classic strategy game.",
-    link: "./games.html"
+    description: "Challenge the computer and test your luck.",
+    link: "../games/rock_paper_scissors/rock_paper_scissors.html"
   },
   { 
     title: "Snake Game", 
