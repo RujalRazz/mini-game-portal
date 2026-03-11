@@ -239,7 +239,7 @@ function togglePause() {
   isPaused = !isPaused;
 
   if (isPaused) {
-    showOverlay("Paused", "Click Replay to restart");
+    showOverlay("Paused", "Resume, Replay or Exit the game", "Exit");
   } else {
     hideOverlay();
   }
@@ -278,11 +278,7 @@ replayBtn.addEventListener("click", () => {
 });
 
 exitBtn.addEventListener("click", () => {
-  if (isGameOver) {
     window.location.href = "../../games.html";
-  } else if (isPaused) {
-    togglePause();
-  }
 });
 
 createBoard();
