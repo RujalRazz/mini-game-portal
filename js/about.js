@@ -33,7 +33,7 @@ const teamMembers = [
           name: "Shidharth Kharga",
           bio: "AI ",
           skills: ["Java", "Python", "Numpy", "C#"],
-          picture: "",
+          picture: "./assets/images/Shidharth.jpeg",
           social: {
             github: "https://github.com/justwannar0ck",
             linkedin: "https://www.linkedin.com/in/shidharth-kharga-4b0258371/"
