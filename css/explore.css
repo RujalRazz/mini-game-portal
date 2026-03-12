@@ -51,7 +51,11 @@
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
+<<<<<<< Updated upstream
   height: 80vh;
+=======
+  height: 600px;
+>>>>>>> Stashed changes
 }
 
 .section-title {
@@ -73,7 +77,11 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+<<<<<<< Updated upstream
   gap: 50px;
+=======
+  gap: 80px;
+>>>>>>> Stashed changes
   max-width: 1000px;
   width: 100%;
 }
