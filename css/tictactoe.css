@@ -3,6 +3,48 @@
   src: url("../assets/fonts/Minecraft.ttf") format("truetype");
 }
 
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(10, 0, 20, 0.9);
+  border-bottom: 1px solid #9333ea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img { width: 35px; }
+.logo span {
+  font-size: 18px;
+  color: #c084fc;
+  font-family: "Minecraft", sans-serif;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Minecraft", sans-serif;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #c084fc;
+  text-shadow: 0 0 8px #9333ea;
+}
+
 /* game layout */
 .game-section {
   display: flex;
@@ -14,7 +56,6 @@
   padding: 20px;
   overflow: hidden;
 }
-.game-section.fullscreen { height: 100vh; }
 
 .section-title {
   font-size: 28px;
@@ -70,7 +111,7 @@
   display: flex;
   justify-content: center;
   gap: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .score {
   display: flex;
@@ -89,19 +130,7 @@
   font-size: 22px;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.x-score span:last-child { color: #c084fc; }
-.o-score span:last-child { color: #f472b6; }
-.d-score span:last-child { color: #fbbf24; }
-
-/* turn status */
-.status {
-  font-size: 14px;
-  margin-bottom: 12px;
-  min-height: 30px;
-  line-height: 30px;
-  color: #d8b4fe;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 
 /* board */
@@ -111,7 +140,7 @@
   grid-template-rows: repeat(3, 90px);
   gap: 8px;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .cell {
   width: 90px;
@@ -129,13 +158,11 @@
   user-select: none;
   font-family: "Minecraft", sans-serif;
 }
-.cell:hover {
+.cell:hover:not(.taken) {
   background: rgba(147, 51, 234, 0.2);
   border-color: #9333ea;
 }
-.cell.taken {
-  cursor: not-allowed;
-}
+.cell.taken { cursor: not-allowed; }
 .cell.x {
   color: #c084fc;
   text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
@@ -151,23 +178,25 @@
 }
 
 /* buttons */
-.game-buttons { display: flex; justify-content: center; }
+.game-buttons { 
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+}
 .btn {
   padding: 10px 24px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  border: none;
+  border: 1px solid #a855f7;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.menu-btn {
   background: linear-gradient(135deg, #9333ea, #7c3aed);
-  border: 1px solid #a855f7;
 }
-.menu-btn:hover {
+.btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+  border-color: #c084fc;
 }
