@@ -13,7 +13,7 @@
       body {
         font-family: "Minecraft";
       }
-      
+
       .games-section {
         padding: 80px 0;
         text-align: center;
@@ -166,11 +166,38 @@
 
       @media (max-width: 768px) {
         .carousel-container {
-          padding: 0 60px;
+          padding: 20px;
+          overflow-y: auto;
+          max-height: 80vh;
+        }
+
+        .arrow{
+          display: none !important;
+        }
+
+        .carousel {
+          flex-direction: column;
+          gap: 30px;
         }
 
         .card {
-          min-width: 220px;
+          width: 100%;
+          max-width: 350px;
+          transform: scale(1) !important;
+          opacity: 1 !important;
+          filter: blur(0px) !important;
+          cursor: pointer !important;
+          box-shadow: 0 0 30px rgba(147, 51, 234, 0.8) !important;
+          border-color: #c084fc !important;
+        }
+
+        .card .play {
+          opacity: 1 !important;
+          pointer-events: all !important;
+        }
+
+        .card:hover {
+          transform: scale(1.05) !important;
         }
 
         .section-title {
@@ -181,15 +208,21 @@
   </head>
   <body>
     <nav class="navbar">
-      <a href="./games.html"
+      <a href="./index.html"
         ><div class="logo">
           <img src="./assets/images/logo.png" alt="logo" />
           <span>ASOBI</span>
         </div></a
       >
-      <ul class="nav-links">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="./games.html">Games</a></li>
-        <li><a href="#">Explore</a></li>
+        <li><a href="./explore.html">Explore</a></li>
         <li><a href="./about.html">About Us</a></li>
       </ul>
     </nav>
@@ -202,13 +235,12 @@
       </div>
     </section>
     <footer class="footer">
-        <p class="footer-copyright">
-            Copyright © 2026 <strong>ASOBI</strong>. All rights reserved.
-        </p>
-        <p class="footer-text">
-            Love for the mini games.
-        </p>
+      <p class="footer-copyright">
+        Copyright © 2026 <strong>ASOBI</strong>. All rights reserved.
+      </p>
+      <p class="footer-text">Love for the mini games.</p>
     </footer>
     <script src="./js/gamesCard.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
