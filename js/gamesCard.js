@@ -24,6 +24,10 @@ const carousel = document.getElementById("gameCarousel");
 const leftArrow = document.querySelector(".arrow.left");
 const rightArrow = document.querySelector(".arrow.right");
 
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
 function createGameCards() {
   games.forEach((game, index) => {
     const card = document.createElement("div");
@@ -37,11 +41,15 @@ function createGameCards() {
       <h3>${game.title}</h3>
       <p>${game.description}</p>
       <a href="${game.link}" class="play">Play Now</a>`;
+    
     carousel.appendChild(card);
   });
 }
 
 function updateCards() {
+  if(isMobile()){
+    return;
+  }
   const cards = document.querySelectorAll(".card");
   
   cards.forEach((card, index) => {
@@ -55,9 +63,18 @@ function updateCards() {
 }
 
 function updateArrows() {
+  if (isMobile()) {
+    leftArrow.style.display = 'none';
+    rightArrow.style.display = 'none';
+    return;
+  }
+
+  leftArrow.style.display = 'block';
+  rightArrow.style.display = 'block';
   leftArrow.disabled = (currentIndex === 0);
   rightArrow.disabled = (currentIndex === games.length - 1);
 }
+
 
 rightArrow.onclick = () => {
   if (currentIndex < games.length - 1) {
@@ -72,6 +89,5 @@ leftArrow.onclick = () => {
     updateCards();
   }
 };
-
 createGameCards();
 updateCards();

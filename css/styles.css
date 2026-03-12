@@ -1,7 +1,7 @@
 @font-face {
-        font-family: "Minecraft";
-        src: url("./assets/fonts/Minecraft.ttf") format("truetype");
-      }
+  font-family: "Minecraft";
+  src: url("./assets/fonts/Minecraft.ttf") format("truetype");
+}
 body {
   box-sizing: border-box;
   margin: 0;
@@ -16,10 +16,11 @@ body {
   background: rgba(10, 0, 20, 0.8);
   border-bottom: 1px solid #9333ea;
   position: sticky;
-  font-family: 'Minecraft';
+  font-family: "Minecraft";
   top: 0;
-  z-index: 10;
+  z-index: 9;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -49,22 +50,113 @@ body {
   color: #c084fc;
   text-shadow: 0 0 8px #9333ea;
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 101;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #c084fc;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  display: block;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+  background: #fff;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+  background: #fff;
+}
+
+
 .footer {
-        background: linear-gradient(180deg, rgba(10, 0, 20, 0) 0%, rgba(10, 0, 20, 0.95) 50%),
-                    #0a0015;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding-top: 10px;
-        border-top: 1px solid rgba(153, 68, 232, 0.5);
-        text-align: center;
-        font-family: 'Minecraft';
-      }
-      .footer-copyright {
-        color: #d8b4fe;
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
-      .footer-copyright strong {
-        color: #c084fc;
-        font-weight: bold;
-      }
+  background:
+    linear-gradient(180deg, rgba(10, 0, 20, 0) 0%, rgba(10, 0, 20, 0.95) 50%),
+    #0a0015;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(153, 68, 232, 0.5);
+  text-align: center;
+  font-family: "Minecraft";
+}
+.footer-copyright {
+  color: #d8b4fe;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer-copyright strong {
+  color: #c084fc;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 220px;
+    background: rgba(10, 0, 20, 0.98);
+    backdrop-filter: blur(10px);
+    border: 2px solid #9333ea;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 0;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(147, 51, 234, 0.6);
+  }
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .nav-links li {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(147, 51, 234, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover {
+    background: rgba(147, 51, 234, 0.3);
+    padding-left: 25px;
+  }
+
+}

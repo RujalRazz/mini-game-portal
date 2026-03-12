@@ -31,12 +31,12 @@ const teamMembers = [
         },
         {
           name: "Shidharth Kharga",
-          bio: "",
-          skills: [],
+          bio: "AI ",
+          skills: ["Java", "Python", "Numpy", "C#"],
           picture: "",
           social: {
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/justwannar0ck",
+            linkedin: "https://www.linkedin.com/in/shidharth-kharga-4b0258371/"
           }
         }
       ];
