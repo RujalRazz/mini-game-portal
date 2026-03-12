@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Minecraft";
+  src: url("../assets/fonts/Minecraft.ttf") format("truetype");
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(10, 0, 20, 0.9);
+  border-bottom: 1px solid #9333ea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img { width: 35px; }
+.logo span {
+  font-size: 18px;
+  color: #c084fc;
+  font-family: "Minecraft", sans-serif;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Minecraft", sans-serif;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #c084fc;
+  text-shadow: 0 0 8px #9333ea;
+}
+
+/* explore section */
+.explore-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #c084fc;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+  font-family: "Minecraft", sans-serif;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: #d8b4fe;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.explore-card {
+  background: #140022;
+  border: 1px solid #9333ea;
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.explore-card:hover {
+  border-color: #c084fc;
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.4);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.explore-card h3 {
+  font-size: 20px;
+  color: #c084fc;
+  margin-bottom: 10px;
+  font-family: "Minecraft", sans-serif;
+}
+
+.explore-card p {
+  font-size: 14px;
+  color: #d8b4fe;
+  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
