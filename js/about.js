@@ -21,12 +21,12 @@ const teamMembers = [
         },
         {
           name: "Aarogya Thapa",
-          bio: "",
-          skills: [],
-          picture: "",
+          bio: "Problem solver and mathematics enthusiast.",
+          skills: ["HTML", "CSS", "JavaScript", "Python"],
+          picture: "./assets/images/Aarogya.jpeg",
           social: {
-            github: "#",
-            linkedin: "#"
+            github: "https://github.com/aarogyathapa098",
+            linkedin: "https://www.linkedin.com/in/aarogya-thapa-475678378/"
           }
         },
         {
