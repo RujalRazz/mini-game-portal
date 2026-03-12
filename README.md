@@ -1,8 +1,10 @@
 <div align = "center">
 <h1> 🎮 ASOBI </h1>
   A mini game portal
+  <br>
   <img width="1280" height="608" alt="image" src="https://github.com/user-attachments/assets/fbee498a-66a7-405e-91ae-2bfd2f16e3b3" />
-  <img width="1280" height="607" alt="image" src="https://github.com/user-attachments/assets/6c367cd8-5586-40f6-8385-6bc41f6fdfc3" />
+<img width="1280" height="606" alt="image" src="https://github.com/user-attachments/assets/6a2bfcf6-c69b-42a9-934e-d6a27a5f1da9" />
+
 
 ASOBI" (遊び) means "play" in Japanese — and that's exactly what we're here for.
 </div>
@@ -34,11 +36,15 @@ mini-game-portal/
 |   |  |--rock_paper_scissors.css
 |   |  |--rock_paper_scissors.html
 |   |  |--rock_paper_scissors.js
-|   |--titactoe.html              
+|   |--titactoe.html
+|   |--snake_game/
+|   |  |--snake_game.css
+|   |  |--snake_game.html
+|   |  |--snake_hame.js             
 |--assets/
-|   |--fonts/                           # minecrafty font
-|   |--images/                          # game images, logo and pictures
-|--.github/workflows/
+|   |--fonts/                         # minecrafty font
+|   |--images/                        # game images, logo and pictures
+|--.github/workflows/                 # GitHub Actions (static deployment)
 ```
 
 ### 🕹️ Games
@@ -59,7 +65,12 @@ mini-game-portal/
 - "Back to Menu" and "Reset Game" controls
 
 #### 🐍 The Snake Game
-
+| The classic snake experience with levels and dynamic difficulty.
+- White food — worth 100 points; Blue food — worth 200 points (30% spawn chance)
+- Speed increases with every food eaten, keeping the challenge alive
+- Level 2 unlocks at 500 points — random wall obstacles appear on the board
+- Pause anytime with Space or the overlay button; resume right where you left off
+- "Replay" restarts the game • "Exit" returns to the Games menu
 
 ### ✨ Features
 - 🎨 Retro-purple dark theme with glowing neon effects throughout
@@ -99,6 +110,8 @@ Or simply visit the live deployment if available via GitHub Pages.
 ### 👥 Team
 Built with 💜 by the ASOBI team for a web development event.
 Check out the About page inside the portal to meet the team!
+<img width="1280" height="611" alt="image" src="https://github.com/user-attachments/assets/ae8ee26b-5f83-4c7e-95c7-64d3bf453372" />
+
 
 
 <div align="center">
